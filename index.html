@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- set before the first paint, so the page can tell it has JavaScript -->
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>Thunderbolt — Plus qu'une casquette</title>
+    <meta
+      name="description"
+      content="Thunderbolt : la casquette au logo éclair brodé fil par fil, brodée en France. 30 €."
+    />
+    <meta name="theme-color" content="#f39c1e" />
+    <meta name="robots" content="noindex" />
+    <meta property="og:title" content="Thunderbolt — la casquette brodée en France" />
+    <meta property="og:description" content="Logo éclair brodé fil par fil. Taille unique, réglable. 30 €." />
+    <meta property="og:image" content="https://i.imgur.com/e9JM0L8.png" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="locked">
+    <a class="skip mono" href="#order">Aller à la commande</a>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <linearGradient id="ig" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffd23f" />
+          <stop offset="1" stop-color="#f28c18" />
+        </linearGradient>
+        <symbol id="bolt" viewBox="0 0 24 24">
+          <path
+            d="M14.5 1.5 4 14h7l-2.2 8.5L20 9.5h-7.2z"
+            fill="url(#ig)"
+            stroke="#111"
+            stroke-width="1.3"
+            stroke-linejoin="round"
+          />
+        </symbol>
+      </defs>
+    </svg>
+    <div id="intro" aria-label="Intro">
+      <svg id="ibolt" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M14.5 1.5 4 14h7l-2.2 8.5L20 9.5h-7.2z" />
+      </svg>
+      <div id="flash"></div>
+      <div id="stamp" aria-hidden="true">THUNDERBOLT</div>
+      <button id="skip" class="mono">Passer l'intro</button>
+    </div>
+    <script src="js/intro.js"></script>
+
+    <header id="nav">
+      <a class="logo" href="#hero">
+        <i>
+          <svg class="boltsvg"><use href="#bolt" /></svg>
+        </i>
+        <span>THUNDERBOLT</span>
+      </a>
+      <nav class="pill mono" aria-label="Sections">
+        <span class="hl"></span>
+        <a href="#hero" data-s="hero">Accueil</a>
+        <a href="#details" data-s="details">Détails</a>
+        <a href="#order" data-s="order">Commander</a>
+        <a href="#faq" data-s="faq">Questions</a>
+      </nav>
+      <a class="cta mono" href="#order" id="navBuy">
+        <i>
+          <svg class="boltsvg"><use href="#bolt" /></svg>
+        </i>
+        Acheter · 30 €
+      </a>
+    </header>
+
+    <main>
+      <section id="hero" aria-labelledby="hero-h">
+        <div class="reveal"></div>
+        <div class="hero-grid">
+          <div class="hero-text">
+            <p class="eyebrow mono">Thunderbolt · brodée en France</p>
+            <h1 id="hero-h">
+              La casquette
+              <span>Thunderbolt</span>
+            </h1>
+            <p class="hero-lead">
+              Une casquette blanche et sobre, avec le logo éclair brodé fil par fil. Taille unique, réglable.
+            </p>
+            <div class="hero-buy">
+              <span class="hero-price">30 €</span>
+              <a class="btn btn--dark" href="#order">Acheter</a>
+              <a class="btn btn--line" href="#details">Voir les détails</a>
+            </div>
+            <ul class="hero-facts mono">
+              <li>Brodée en France</li>
+              <li>Taille unique</li>
+              <li>Livraison 5 €</li>
+            </ul>
+          </div>
+          <div class="hero-stage" id="stage">
+            <div class="cap3d" id="heroCap">
+              <div class="sh"></div>
+              <div class="fl">
+                <img
+                  class="f"
+                  src="img/casquette-face.png"
+                  alt="La casquette blanche Thunderbolt vue de face, logo éclair orange et nom brodé en noir"
+                  width="513"
+                  height="486"
+                  fetchpriority="high"
+                />
+                <img class="b" src="img/casquette-profil.png" alt="" width="548" height="456" />
+              </div>
+            </div>
+            <div class="stage-ctrl">
+              <span class="mono" id="viewLabel">Face · logo éclair brodé</span>
+              <button id="next" type="button" aria-label="Tourner la casquette">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 12a8 8 0 1 1-2.6-5.9" />
+                  <path d="M20 4v5h-5" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <i class="bolt-deco b1" aria-hidden="true">
+          <svg class="boltsvg"><use href="#bolt" /></svg>
+        </i>
+        <i class="bolt-deco b2" aria-hidden="true">
+          <svg class="boltsvg"><use href="#bolt" /></svg>
+        </i>
+      </section>
+
+      <section id="details" aria-labelledby="details-h">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="eyebrow mono">Les détails</p>
+            <h2 id="details-h">Faite pour durer</h2>
+            <p>
+              Brodée en France sur un coton épais, la casquette Thunderbolt garde sa forme et son logo, jour
+              après jour.
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <div class="card-img">
+                <img
+                  src="img/broderie.png"
+                  alt="Gros plan sur le logo éclair et le nom brodés"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Brodé fil par fil</h3>
+              <p>
+                L'éclair et le nom sont brodés, pas imprimés : du relief, de la tenue, et un logo qui ne
+                s'efface pas.
+              </p>
+            </article>
+            <article class="card">
+              <div class="card-img card-img--cut">
+                <img
+                  src="img/casquette-profil.png"
+                  alt="La casquette vue de profil, visière vers la droite"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Une ligne sobre</h3>
+              <p>Une forme structurée et une visière légèrement courbée : une casquette qui va avec tout.</p>
+            </article>
+            <article class="card">
+              <div class="card-img">
+                <img src="img/visiere.png" alt="Les rangs de surpiqûres sur la visière" loading="lazy" />
+              </div>
+              <h3>Coton épais</h3>
+              <p>Un coton dense et des surpiqûres régulières sur la visière, pour qu'elle garde sa forme.</p>
+            </article>
+            <article class="card">
+              <div class="card-img card-img--type">
+                <span>
+                  Brodée
+                  <br />
+                  en France
+                </span>
+              </div>
+              <h3>Taille unique</h3>
+              <p>Une patte réglable à l'arrière, qui s'ajuste en deux secondes à toutes les têtes.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="identite" aria-label="Plus qu'une casquette, une identité">
+        <div class="id-sticky">
+          <div class="id-bolts" aria-hidden="true"></div>
+          <p class="id-title">
+            Plus qu'une casquette,
+            <br />
+            <em>une identité.</em>
+          </p>
+        </div>
+      </section>
+
+      <section id="order" aria-labelledby="order-h">
+        <div class="glow"></div>
+        <div class="ogrid">
+          <div class="gallery">
+            <div class="gallery-main" id="galleryMain">
+              <img class="on" src="img/casquette-face.png" alt="Casquette Thunderbolt blanche, vue de face" />
+              <img
+                src="img/casquette-profil.png"
+                alt="Casquette Thunderbolt blanche, vue de profil"
+                loading="lazy"
+              />
+              <img
+                class="cover"
+                src="img/broderie.png"
+                alt="Gros plan sur la broderie du logo"
+                loading="lazy"
+              />
+            </div>
+            <div class="thumbs">
+              <button class="on" type="button" aria-label="Voir la casquette de face" aria-pressed="true">
+                <img src="img/casquette-face.png" alt="" />
+              </button>
+              <button type="button" aria-label="Voir la casquette de profil" aria-pressed="false">
+                <img src="img/casquette-profil.png" alt="" loading="lazy" />
+              </button>
+              <button type="button" aria-label="Voir la broderie de près" aria-pressed="false">
+                <img class="cover" src="img/broderie.png" alt="" loading="lazy" />
+              </button>
+            </div>
+          </div>
+          <div class="otxt">
+            <p class="eyebrow mono">Commander</p>
+            <h2 id="order-h">
+              La casquette
+              <em>Thunderbolt</em>
+            </h2>
+            <div class="priceline">
+              <b>30 €</b>
+              <span>+ 5 € de livraison</span>
+            </div>
+            <p>
+              Casquette blanche, logo éclair brodé fil par fil. Sobre, reconnaissable, pensée pour être portée
+              tous les jours.
+            </p>
+            <ul class="olist">
+              <li>
+                <span>Couleur</span>
+                <span>Blanc</span>
+              </li>
+              <li>
+                <span>Taille</span>
+                <span>Unique, réglable</span>
+              </li>
+              <li>
+                <span>Matière</span>
+                <span>Coton épais</span>
+              </li>
+              <li>
+                <span>Broderie</span>
+                <span>Faite en France</span>
+              </li>
+              <li>
+                <span>Livraison</span>
+                <span>5 € · 5 à 10 jours</span>
+              </li>
+            </ul>
+            <a id="buy" href="#order">
+              Acheter · 35 €
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+            <p class="secure" id="buyNote" role="status">
+              Paiement sécurisé Stripe · Carte, Apple Pay, Google Pay, Klarna
+              <br />
+              Adresse renseignée au paiement
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" aria-labelledby="faq-h">
+        <div class="faq-grid">
+          <div class="faq-intro">
+            <h2 id="faq-h">Questions</h2>
+            <p>Une autre question ? Écris à Thunderbolt sur Instagram, la réponse arrive vite.</p>
+          </div>
+          <div class="faq-list">
+            <div class="faq-item">
+              <h3>Quelle taille choisir ?</h3>
+              <p>Il n'y a qu'une taille : la patte à l'arrière se règle à ton tour de tête.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Combien coûte la livraison ?</h3>
+              <p>5 €, et la casquette arrive en 5 à 10 jours.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Comment payer ?</h3>
+              <p>Par carte, Apple Pay, Google Pay ou Klarna, sur la page de paiement sécurisée Stripe.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Le logo est-il imprimé ?</h3>
+              <p>Non. L'éclair et le nom sont brodés fil par fil : ils gardent leur relief.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Où la casquette est-elle brodée ?</h3>
+              <p>En France.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="suivre" aria-labelledby="suivre-h">
+        <div class="suivre-in">
+          <div>
+            <h2 id="suivre-h">Suis Thunderbolt</h2>
+            <p>Les nouveautés, la casquette portée et les coulisses de la broderie.</p>
+          </div>
+          <div class="suivre-links">
+            <a href="https://www.instagram.com/thunderbolt31177/" target="_blank" rel="noopener">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                aria-hidden="true"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+              </svg>
+              Instagram
+            </a>
+            <a href="https://www.tiktok.com/@thunderbolt_off" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M16.6 3c.3 2.2 1.7 3.7 3.9 3.9v3.1c-1.4 0-2.7-.4-3.9-1.1v6.3a5.8 5.8 0 1 1-5.8-5.8c.3 0 .6 0 .9.1v3.2a2.7 2.7 0 1 0 1.8 2.5V3z"
+                />
+              </svg>
+              TikTok
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="foot" id="contact">
+      <div class="foot__word" aria-hidden="true">
+        <i>
+          <svg class="boltsvg"><use href="#bolt" /></svg>
+        </i>
+        <span>THUNDERBOLT</span>
+      </div>
+      <div class="foot__grid">
+        <div class="foot__brand">
+          <p>Casquettes brodées fil par fil, en France. Taille unique, réglable.</p>
+          <a class="foot__cta" href="#order">Acheter · 30 €</a>
+        </div>
+        <nav class="foot__col" aria-label="La casquette">
+          <h3 class="mono">La casquette</h3>
+          <a href="#details">Détails</a>
+          <a href="#order">Commander</a>
+          <a href="#faq">Questions</a>
+        </nav>
+        <nav class="foot__col" aria-label="Réseaux">
+          <h3 class="mono">Suivre</h3>
+          <a href="https://www.instagram.com/thunderbolt31177/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@thunderbolt_off" target="_blank" rel="noopener">TikTok</a>
+        </nav>
+        <nav class="foot__col" aria-label="Informations">
+          <h3 class="mono">Infos</h3>
+          <a href="mentions-legales.html">Mentions légales</a>
+          <span>Livraison 5 € · 5 à 10 jours</span>
+        </nav>
+      </div>
+      <div class="foot__bar">
+        <span>© 2026 Thunderbolt · Brodé en France</span>
+        <span>Site réalisé par Studio Relief</span>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
